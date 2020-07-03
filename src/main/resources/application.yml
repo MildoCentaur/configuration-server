@@ -1,0 +1,28 @@
+---
+server:
+  port: 8088
+spring:
+  security:
+    basic:
+      enabled: true
+    user:
+      name: ${username}
+      password: ${password}
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false
+        git:
+          uri: https://github.com/MildoCentaur/app-configurations
+          search-paths:
+            - 'posts'
+            - 'challenges'
+
+#          BACKUP CONFIG REPO
+#          repos:
+#            local:
+#              pattern: '*/local'
+#              uri: https://github.com/rseroter/pluralsight-spring-cloudconfig-wa-tolls-local # alt
+#              search-paths:
+#                - 'station*'
