@@ -9,6 +9,8 @@ spring:
       name: ${username}
       password: ${password}
   cloud:
+    bus:
+      enabled:
     config:
       server:
         encrypt:
@@ -18,6 +20,11 @@ spring:
           search-paths:
             - 'posts'
             - 'challenges'
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 #          BACKUP CONFIG REPO
 #          repos:
