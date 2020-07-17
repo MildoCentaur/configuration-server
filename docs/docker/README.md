@@ -5,7 +5,7 @@
 Rabbit MQ is a message broker that can be installed with a docker image 
 
 ```
-docker run -d --hostname my-rabbit --name some-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+docker run -d --hostname docker-rabbit --name docker-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
 ```
 open http://localhost:15672, which will show the management console login form.
 
